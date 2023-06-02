@@ -1,6 +1,7 @@
 import { Typography, Stack, Divider, Link, Button } from "@mui/material";
 import { useState } from "react";
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import Image from "next/image";
 
 const ImageStack = ({ images, titles, desc, writer }) => {
     const [hoverIndex, setHoverIndex] = useState(null);
@@ -39,7 +40,7 @@ const ImageStack = ({ images, titles, desc, writer }) => {
                             textAlign: "center",
                         }}
                     >
-                        <img src={src} style={{ objectFit: "cover", height: "220px", width: "325px" }} alt="pic" />
+                        <Image src={src} style={{ objectFit: "cover", height: "220px", width: "325px" }} alt="pic" />
                         <Stack
                             style={{
                                 position: "absolute",
@@ -76,12 +77,12 @@ const ImageStack = ({ images, titles, desc, writer }) => {
                                 transition: ".2s ease-in .5s"
                             }}>{desc[index]}</Typography>
 
-                              <Typography variant="body1" sx={{
-                                 padding: "10px 0px 20px 0px",fontSize: "15px",
+                            <Typography variant="body1" sx={{
+                                padding: "10px 0px 20px 0px", fontSize: "15px",
                                 transition: ".2s ease-in .5s"
                             }}>By: {writer[index]}</Typography>
 
-                            <Link to={`/${titles[index]}`} style={{ textDecoration: "none" }}><Button sx={{ color: "#fff", border: "2px solid rgb(132 80 189)", textTransform: "capitalize" }}>Read More <ArrowOutwardIcon sx={{ fontSize: "20px", marginLeft: "5px" }} /></Button></Link>
+                            <Link to={`/${titles[index]}`} style={{ textDecoration: "none" }}><Button sx={{ color: "#fff", border: "2px solid #e9a254", textTransform: "capitalize" }}>Read More <ArrowOutwardIcon sx={{ fontSize: "20px", marginLeft: "5px" }} /></Button></Link>
                         </Stack>
                     </Stack>
                 </Stack>
@@ -110,8 +111,8 @@ const RecentIssues = () => {
                 <Typography variant="h4">Recent Issues</Typography>
                 <Divider sx={{ borderBottom: '3px solid', width: '150px' }} />
 
-                <Stack padding={{ xs: "60px 20px", sm: "80px 40px" }}  justifyContent="center" alignItems="center">
-                    
+                <Stack padding={{ xs: "60px 20px", sm: "80px 40px" }} justifyContent="center" alignItems="center">
+
                     <ImageStack images={imageSet1} titles={titlesSet1} desc={DescSet1} writer={Writer} />
                 </Stack>
             </Stack>
