@@ -6,13 +6,13 @@ import theme from '../theme/typography';
 function Layout({ children }) {
   return (
     <ThemeProvider theme={theme}>
-    <div>
-      <Head>
-      <link rel="icon" href="/logoLight.png" />
-        <title>Literary Society</title>
-      </Head>
+      <div>
+        <Head>
+          <link rel="icon" href="/logo.png" />
+          <title>Literary Society</title>
+        </Head>
         {children}
-    </div>
+      </div>
     </ThemeProvider>
   );
 }
