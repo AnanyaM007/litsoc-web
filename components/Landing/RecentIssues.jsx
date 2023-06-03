@@ -1,7 +1,6 @@
-import { Typography, Stack, Divider, Link, Button } from "@mui/material";
+import { Typography, Stack, Divider, Link, Button, Box } from "@mui/material";
 import { useState } from "react";
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import Image from "next/image";
 
 const ImageStack = ({ images, titles, desc, writer }) => {
     const [hoverIndex, setHoverIndex] = useState(null);
@@ -40,7 +39,7 @@ const ImageStack = ({ images, titles, desc, writer }) => {
                             textAlign: "center",
                         }}
                     >
-                        <Image src={src} style={{ objectFit: "cover", height: "220px", width: "325px" }} alt="pic" />
+                        <Box component="img" src={src} style={{ objectFit: "cover", height: "220px", width: "325px" }} alt="pic" />
                         <Stack
                             style={{
                                 position: "absolute",

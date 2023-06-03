@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react";
-import { Stack, Typography, Divider } from "@mui/material";
+import { Stack, Typography, Divider, Box } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
-import Image from "next/image";
 
 const Gallery = () => {
   const Carousels = [
@@ -130,7 +129,7 @@ const Gallery = () => {
                   })
                 }}
               >
-                <Image src={carousel.img} alt={`Image ${index + 1}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <Box component="img" src={carousel.img} alt={`Image ${index + 1}`} sx={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </Stack>
             ))}
           </Stack>
