@@ -8,7 +8,7 @@ const KnowYourClub = () => {
                     <Typography variant="h4" sx={{ marginBottom: "30px" }}>Know your Club</Typography>
                     <Typography variant="h6">&quot;Know Your Club&quot;, is a captivating chronicle that unveils the vibrant world of clubs at VSSUT. Discover achievements, events, and the spirit of passion and unity that thrives within each club. </Typography>
                 </Stack>
-                <Box component={"img"} src={"Group discussion-amico.png"} width={"350px"} />
+                <Box component={"img"} src={"Group discussion-amico.png"} width={{ xs: "250px", sm: "300px", md: "380px" }} />
             </Stack>
         </>
     );

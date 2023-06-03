@@ -3,7 +3,7 @@ import { Typography, Stack } from "@mui/material";
 const Navbar = () => {
     return (
         <>
-            <Stack gap={10} padding={"10px 30px"} flexDirection={"row"} justifyContent={"center"} alignItems={"center"} sx={{ background: "#FBEFE2" }}>
+            <Stack sx={{ display: { xs: "none", md: "flex" }, background: "#FBEFE2" }} gap={10} padding={"10px 30px"} flexDirection={"row"} justifyContent={"center"} alignItems={"center"}>
                 <Typography>Academics</Typography>
                 <Typography>Campus</Typography>
                 <Typography>Events</Typography>
