@@ -10,15 +10,6 @@ body {
   overflow-x: hidden;
 }
 
-.heading {
-  font-weight: 600;
-  font-size: 25px;
-}
-
-.sub-heading {
-  font-size: 20px;
-}
-
 html{
   scroll-behavior: smooth;
 }

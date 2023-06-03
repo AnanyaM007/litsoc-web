@@ -3,41 +3,53 @@ import CopyrightIcon from '@mui/icons-material/Copyright';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { styled } from '@mui/material';
 
 const Footer = () => {
+    const Heading = styled(Typography)(({ theme }) => ({
+        fontSize: "25px",
+        fontWeight: "600",
+      }));
+    
+      const SubHeading = styled(Typography)(({ theme }) => ({
+        fontSize: "20px",
+        marginBottom: "8px",
+      }));
     return (
         <>
             <Stack padding={"50px 0px"} flexDirection={"row"} justifyContent={"space-evenly"} alignItems={"center"} flexWrap={"wrap"} sx={{ background: "#FFD8A9" }}>
                 <Box component={"img"} src={"logo.png"} width={"250px"} />
-                <Stack>
-                    <Typography className="heading">Home</Typography>
-                    <Typography className="sub-heading">Recent Issues</Typography>
-                    <Typography className="sub-heading">Word of week</Typography>
-                    <Typography className="sub-heading">Scribe Screen</Typography>
-                    <Typography className="sub-heading">Know your Club </Typography>
-                </Stack>
-                <Stack>
-                    <Typography className="heading">About Us</Typography>
-                    <Typography className="sub-heading">The VerSSe</Typography>
-                    <Typography className="sub-heading">The ViSSonary</Typography>
-                    <Typography className="sub-heading">Collaborations</Typography>
-                    <Typography className="sub-heading">Know your Club </Typography>
-                </Stack>
-                <Stack>
-                    <Typography className="heading">Blog</Typography>
-                    <Typography className="sub-heading">Recent</Typography>
-                    <Typography className="sub-heading">Popular</Typography>
-                </Stack>
-                <Stack>
-                    <Typography className="heading">News</Typography>
-                    <Typography className="sub-heading">Events</Typography>
-                    <Typography className="sub-heading">Official</Typography>
-                    <Typography className="sub-heading">Trending</Typography>
-                </Stack>
-                <Stack>
-                    <Typography className="heading">Team</Typography>
-                    <Typography className="sub-heading">Current</Typography>
-                    <Typography className="sub-heading">Alumini</Typography>
+                <Stack flexWrap={"wrap"} flexDirection={"row"}gap={15}>
+                    <Stack>
+                        <Heading>Home</Heading>
+                        <SubHeading>Recent Issues</SubHeading>
+                        <SubHeading>Word of week</SubHeading>
+                        <SubHeading>Scribe Screen</SubHeading>
+                        <SubHeading>Know your Club </SubHeading>
+                    </Stack>
+                    <Stack>
+                        <Heading>About Us</Heading>
+                        <SubHeading>The VerSSe</SubHeading>
+                        <SubHeading>The ViSSonary</SubHeading>
+                        <SubHeading>Collaborations</SubHeading>
+                        <SubHeading>Know your Club </SubHeading>
+                    </Stack>
+                    <Stack>
+                        <Heading>Blog</Heading>
+                        <SubHeading>Recent</SubHeading>
+                        <SubHeading>Popular</SubHeading>
+                    </Stack>
+                    <Stack>
+                        <Heading>News</Heading>
+                        <SubHeading>Events</SubHeading>
+                        <SubHeading>Official</SubHeading>
+                        <SubHeading>Trending</SubHeading>
+                    </Stack>
+                    <Stack>
+                        <Heading>Team</Heading>
+                        <SubHeading>Current</SubHeading>
+                        <SubHeading>Alumini</SubHeading>
+                    </Stack>
                 </Stack>
             </Stack>
             <Stack padding={"20px 80px"} flexDirection={"row"} justifyContent={"space-between"} flexWrap={"wrap"} sx={{ background: "#E9A254" }}>
