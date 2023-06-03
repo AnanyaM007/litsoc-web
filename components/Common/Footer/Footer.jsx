@@ -58,9 +58,9 @@ const Footer = () => {
                     </Stack>
                 </Stack>
             </Stack>
-            <Stack padding={"20px 80px"} flexDirection={{ xs: "column", sm: "column", md: "row" }} justifyContent={{ xs: "space-evenly", md: "space-between" }} sx={{ background: "#E9A254" }}>
-                <Typography sx={{ fontSize: "20px" }}>The Literary Society <CopyrightIcon sx={{ position: "relative", top: "7px" }} /> 2023.&nbsp;All rights reserved.</Typography>
-                <Stack gap={5} flexDirection={"row"} sx={{ position: "relative", top: "5px" }}>
+            <Stack padding={"20px 80px"} flexDirection={{ xs: "column", sm: "column", md: "row" }} alignItems={"center"} justifyContent={{ xs: "space-evenly", md: "space-between" }} sx={{ background: "#E9A254" }}>
+                <Typography textAlign={"center"} sx={{ fontSize: "20px" }}>The Literary Society <CopyrightIcon sx={{ position: "relative", top: "7px" }} /> 2023.&nbsp;All rights reserved.</Typography>
+                <Stack gap={5} alignItems={"center"} flexDirection={"row"} sx={{ position: "relative", top: "5px" }}>
                     <Link href="https://www.instagram.com/teamvissionary_vssut/" target="_blank" sx={{ color: "#000" }}><InstagramIcon /></Link>
                     <Link href="mailto:" target="_blank" sx={{ color: "#000" }}><MailOutlineIcon /></Link>
                     <Link href="https://www.linkedin.com/company/itslitsoc/" target="_blank" sx={{ color: "#000" }}><LinkedInIcon /></Link>
