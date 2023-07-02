@@ -180,7 +180,7 @@ const Login = () => {
                   background: "none",
                   color: "#E9A254"
                 }
-              }} >Don't have an account? &nbsp; Register</Button></Link>
+              }} >Don&apos;t have an account? &nbsp; Register</Button></Link>
             </Grid>
           </Grid>
         </Grid>
