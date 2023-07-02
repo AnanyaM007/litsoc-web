@@ -1,6 +1,6 @@
 import { Button, Link, Typography, Stack, Box } from "@mui/material";
 
-const VerSSeBody = () => {
+const VersseBody = () => {
     return (
         <Stack m={{ xs: 3, sm: 7, md: 10 }}>
             <Typography
@@ -15,5 +15,4 @@ const VerSSeBody = () => {
     );
 }
 
-export default VerSSeBody;
-
+export default VersseBody;
