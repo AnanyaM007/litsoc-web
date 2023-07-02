@@ -24,7 +24,7 @@ const Footer = () => {
     return (
         <>
             <Stack flexWrap={"wrap"} padding={"50px 0px"} flexDirection={{ xs: "column", sm: "column", md: "row" }} justifyContent={"space-evenly"} alignItems={"center"} sx={{ background: "#FFD8A9" }}>
-                <Box component={"img"} src={"logo.png"} width={"250px"} marginBottom={{xs:"50px", sm:"50px"}} />
+                <Link href="/"><Box component={"img"} src={"logo.png"} width={"250px"} marginBottom={{xs:"50px", sm:"50px"}} /></Link>
                 <Stack flexWrap={"wrap"} flexDirection={{ xs: "column", sm: "row", md: "row" }} gap={10} padding={"0px 40px"}>
                     <Stack>
                         <Heading>Home</Heading>

@@ -1,18 +1,19 @@
+import { Button, Link, Typography, Stack, Box } from "@mui/material";
 import Navbar from "../../components/Common/Navbar/Navbar";
 import SecondNavbar from "../../components/Common/Navbar/SecondNavbar";
 import Footer from "../../components/Common/Footer/Footer";
-import AboutBody from "../../components/About/AboutBody";
+import TeamBody from "../../components/Team/teambody";
 
-const About = () => {
+const Team = () => {
     return (
         <>
         <Navbar />
         <SecondNavbar />
-        <AboutBody />
+        <TeamBody />
         <Footer />
         </>
     );
 }
 
-export default About;
+export default Team;
 

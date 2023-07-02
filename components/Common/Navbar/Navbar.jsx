@@ -44,7 +44,7 @@ const Navbar = () => {
                 alignItems={"center"}
                 width={"100%"}
             >
-                <Box component={"img"} src={"logo.png"} width={"150px"} />
+                 <Link href="/"><Box component={"img"} src={"logo.png"} width={"150px"} /></Link>
 
                 <Stack
                     gap={8}
