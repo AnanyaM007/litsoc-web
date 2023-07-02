@@ -4,7 +4,7 @@ const Navbar = () => {
     const TypographyMain = styled(Typography)(({ theme }) => ({
         color: "#000",
         textDecoration: "none",
-        '&:hover':{
+        '&:hover': {
             color: "#ffb86c",
         }
     }));

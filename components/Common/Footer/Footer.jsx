@@ -9,52 +9,59 @@ const Footer = () => {
     const Heading = styled(Typography)(({ theme }) => ({
         fontSize: '25px',
         fontWeight: '600',
+        color: '#000',
         [theme.breakpoints.down('sm')]: {
             fontSize: '20px',
         },
         [theme.breakpoints.down('xs')]: {
             fontSize: '18px',
         },
+        '&:hover': {
+            color: "#f07e05",
+        }
     }));
 
     const SubHeading = styled(Typography)(({ theme }) => ({
         fontSize: "20px",
         marginBottom: "8px",
+        color: "#000",
+        '&:hover': {
+            color: "#f07e05",
+        }
     }));
     return (
         <>
             <Stack flexWrap={"wrap"} padding={"50px 0px"} flexDirection={{ xs: "column", sm: "column", md: "row" }} justifyContent={"space-evenly"} alignItems={"center"} sx={{ background: "#FFD8A9" }}>
-                <Link href="/"><Box component={"img"} src={"logo.png"} width={"250px"} marginBottom={{xs:"50px", sm:"50px"}} /></Link>
+                <Link href="/"><Box component={"img"} src={"logo.png"} width={"250px"} marginBottom={{ xs: "50px", sm: "50px" }} /></Link>
                 <Stack flexWrap={"wrap"} flexDirection={{ xs: "column", sm: "row", md: "row" }} gap={10} padding={"0px 40px"}>
                     <Stack>
-                        <Heading>Home</Heading>
-                        <SubHeading>Recent Issues</SubHeading>
-                        <SubHeading>Word of week</SubHeading>
-                        <SubHeading>Scribe Screen</SubHeading>
-                        <SubHeading>Know your Club </SubHeading>
+                        <Link href="/"><Heading>Home</Heading></Link>
+                        <Link href="/recent"><SubHeading>Recent Issues</SubHeading></Link>
+                        <Link href="/wow"><SubHeading>Word of week</SubHeading></Link>
+                        <Link href="/scribescreen"><SubHeading>Scribe Screen</SubHeading></Link>
+                        <Link href="/knowyourclub"><SubHeading>Know your Club </SubHeading></Link>
                     </Stack>
                     <Stack>
-                        <Heading>About Us</Heading>
-                        <SubHeading>The VerSSe</SubHeading>
-                        <SubHeading>The ViSSonary</SubHeading>
-                        <SubHeading>Collaborations</SubHeading>
-                        <SubHeading>Know your Club </SubHeading>
+                        <Link href="/about"><Heading>About Us</Heading></Link>
+                        <Link href="/versse"><SubHeading>The VerSSe</SubHeading></Link>
+                        <Link href="/vissionary"><SubHeading>The ViSSonary</SubHeading></Link>
+                        <Link href="/collaborations"><SubHeading>Collaborations</SubHeading></Link>
                     </Stack>
                     <Stack>
-                        <Heading>Blog</Heading>
-                        <SubHeading>Recent</SubHeading>
-                        <SubHeading>Popular</SubHeading>
+                        <Link href="/blog"><Heading>Blog</Heading></Link>
+                        <Link href="/recent"><SubHeading>Recent</SubHeading></Link>
+                        <Link href="/popular"><SubHeading>Popular</SubHeading></Link>
                     </Stack>
                     <Stack>
-                        <Heading>News</Heading>
-                        <SubHeading>Events</SubHeading>
-                        <SubHeading>Official</SubHeading>
-                        <SubHeading>Trending</SubHeading>
+                        <Link href="/news"><Heading>News</Heading></Link>
+                        <Link href="/events"><SubHeading>Events</SubHeading></Link>
+                        <Link href="/official"><SubHeading>Official</SubHeading></Link>
+                        <Link href="/trending"><SubHeading>Trending</SubHeading></Link>
                     </Stack>
                     <Stack>
-                        <Heading>Team</Heading>
-                        <SubHeading>Current</SubHeading>
-                        <SubHeading>Alumini</SubHeading>
+                        <Link href="/team"><Heading>Team</Heading></Link>
+                        <Link href="/current"><SubHeading>Current</SubHeading></Link>
+                        <Link href="/alumini"><SubHeading>Alumini</SubHeading></Link>
                     </Stack>
                 </Stack>
             </Stack>

@@ -14,7 +14,7 @@ const Navbar = () => {
     const TypographyMain = styled(Typography)(({ theme }) => ({
         color: "#000",
         textDecoration: "none",
-        '&:hover':{
+        '&:hover': {
             color: "#ffb86c",
         }
     }));
@@ -44,7 +44,7 @@ const Navbar = () => {
                 alignItems={"center"}
                 width={"100%"}
             >
-                 <Link href="/"><Box component={"img"} src={"logo.png"} width={"150px"} /></Link>
+                <Link href="/"><Box component={"img"} src={"logo.png"} width={"150px"} /></Link>
 
                 <Stack
                     gap={8}
