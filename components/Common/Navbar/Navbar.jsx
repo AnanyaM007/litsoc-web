@@ -1,15 +1,22 @@
 import { useState } from "react";
-import {Typography, Stack, Box, Button, Drawer, List, Collapse, styled} from "@mui/material";
+import { Typography, Stack, Box, Button, Drawer, List, Collapse, styled, Link } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Navbar = () => {
-    const Dropdownmenu = styled(Typography)(({ theme }) => ({
+    const DropdownMenu = styled(Typography)(({ theme }) => ({
         fontSize: "18px",
         marginBottom: "8px",
-        textAlign:"center"
+        textAlign: "center"
+    }));
+    const TypographyMain = styled(Typography)(({ theme }) => ({
+        color: "#000",
+        textDecoration: "none",
+        '&:hover': {
+            color: "#ffb86c",
+        }
     }));
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [isBlogOpen, setIsBlogOpen] = useState(false);
@@ -35,21 +42,22 @@ const Navbar = () => {
                 flexDirection={"row"}
                 justifyContent={"space-between"}
                 alignItems={"center"}
+                width={"100%"}
             >
-                <Box component={"img"} src={"logo.png"} width={"150px"} />
+                <Link href="/"><Box component={"img"} src={"logo.png"} width={"150px"} /></Link>
 
                 <Stack
                     gap={8}
                     flexDirection={"row"}
                     display={{ xs: "none", md: "flex" }}
                 >
-                    <Typography>Home</Typography>
-                    <Typography>About Us</Typography>
-                    <Typography>Blog</Typography>
-                    <Typography>News</Typography>
-                    <Typography>Team</Typography>
+                    <Link href="/"><TypographyMain>Home</TypographyMain></Link>
+                    <Link href="/about"><TypographyMain>About Us</TypographyMain></Link>
+                    <Link href="/blog"><TypographyMain>Blog</TypographyMain></Link>
+                    <Link href="/news"><TypographyMain>News</TypographyMain></Link>
+                    <Link href="/team"><TypographyMain>Team</TypographyMain></Link>
                 </Stack>
-                <Stack display={{ xs: "none", md: "flex" }}>
+                {/* <Stack display={{ xs: "none", md: "flex" }}>
                     <Button
                         sx={{
                             background: "#FFD8A9",
@@ -62,9 +70,9 @@ const Navbar = () => {
                     >
                         Login
                     </Button>
-                </Stack>
+                </Stack> */}
 
-                <Button
+                <Link href="/login"><Button
                     onClick={toggleDrawer}
                     sx={{
                         display: { xs: "block", md: "none" },
@@ -77,7 +85,7 @@ const Navbar = () => {
                     }}
                 >
                     <MenuIcon />
-                </Button>
+                </Button></Link>
 
                 <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer}>
                     <Stack
@@ -101,21 +109,21 @@ const Navbar = () => {
                         <Typography>Home</Typography>
                         <Typography>About Us</Typography>
                         <Typography onClick={handleToggle}>
-                            Blog {isBlogOpen ? <ExpandLessIcon sx={{ fontSize: '22px', position:"relative" ,top:"5px" }} /> : <ExpandMoreIcon sx={{ fontSize: '20px', position:"relative" ,top:"5px" }} />}
+                            Blog {isBlogOpen ? <ExpandLessIcon sx={{ fontSize: '22px', position: "relative", top: "5px" }} /> : <ExpandMoreIcon sx={{ fontSize: '20px', position: "relative", top: "5px" }} />}
                         </Typography>
 
                         <Collapse in={isBlogOpen} timeout="auto" unmountOnExit>
                             <List component="div" disablePadding>
-                                <Dropdownmenu>Academics</Dropdownmenu>
-                                <Dropdownmenu>Campus</Dropdownmenu>
-                                <Dropdownmenu>Events</Dropdownmenu>
-                                <Dropdownmenu>Clubs</Dropdownmenu>
-                                <Dropdownmenu>Admission</Dropdownmenu>
+                                <DropdownMenu>Academics</DropdownMenu>
+                                <DropdownMenu>Campus</DropdownMenu>
+                                <DropdownMenu>Events</DropdownMenu>
+                                <DropdownMenu>Clubs</DropdownMenu>
+                                <DropdownMenu>Admission</DropdownMenu>
                             </List>
                         </Collapse>
                         <Typography>News</Typography>
                         <Typography>Team</Typography>
-                        <Button
+                        {/* <Link href="/login"><Button
                             sx={{
                                 background: "#FFD8A9",
                                 color: "#000000",
@@ -126,7 +134,7 @@ const Navbar = () => {
                             }}
                         >
                             Login
-                        </Button>
+                        </Button></Link> */}
                     </Stack>
                 </Drawer>
             </Stack>

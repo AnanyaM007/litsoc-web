@@ -30,7 +30,7 @@ const ImageStack = ({ images, titles, desc, writer }) => {
                     onMouseLeave={handleMouseLeave}
                 >
                     <Stack
-                        style={{
+                        sx={{
                             width: "100%",
                             height: "100%",
                             display: "flex",
